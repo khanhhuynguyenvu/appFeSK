@@ -1,10 +1,16 @@
 <h1>Angular report</h1>
 <h1>Created by Nguyen Vu Khanh Huy</h1>
 <button (click)="getPost(532145)">Get Post</button>
+<button (click)="callApi(113)">Call API</button>
 <div *ngIf="posts">
   <p>Json result: {{posts | json }}</p>
   <p>Result value: {{posts.value}}</p>
 </div>
 <div *ngIf="onPost && !posts">
   <p>Loading api .....</p>
+</div>
+<div>
+  <h2>Progress bar</h2>
+  <p *ngIf="progress.loaded">Loaded : {{progress.loaded}}</p>
+  <p *ngIf="progress.total">Total: {{progress.total}}</p>
 </div>
